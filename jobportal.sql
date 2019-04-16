@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2019 at 09:22 PM
+-- Generation Time: Apr 07, 2019 at 06:19 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -33,6 +33,14 @@ CREATE TABLE `applyjob` (
   `recruitment_id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `applyjob`
+--
+
+INSERT INTO `applyjob` (`id`, `recruitment_id`, `student_id`) VALUES
+(1, 1, 1),
+(2, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -78,6 +86,25 @@ INSERT INTO `recruitment` (`id`, `title`, `experience`, `description`, `cgpa`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `selectedstudent`
+--
+
+CREATE TABLE `selectedstudent` (
+  `id` int(255) NOT NULL,
+  `recruitment_id` int(255) NOT NULL,
+  `student_id` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `selectedstudent`
+--
+
+INSERT INTO `selectedstudent` (`id`, `recruitment_id`, `student_id`) VALUES
+(3, 1, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `student`
 --
 
@@ -90,6 +117,14 @@ CREATE TABLE `student` (
   `enrollment` varchar(20) NOT NULL,
   `mobile` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`id`, `email`, `password`, `semester`, `department`, `enrollment`, `mobile`) VALUES
+(1, 'hets7878401023@gmail.com', 'het1234', '6', 'I.T', '312312312312313123', '8401644801'),
+(2, 'solankimimoh@gmail.com', 'het1234', '5', 'I.T', '1215646515785', '8401644801');
 
 -- --------------------------------------------------------
 
@@ -136,6 +171,12 @@ ALTER TABLE `recruitment`
   ADD KEY `company_id` (`company_id`);
 
 --
+-- Indexes for table `selectedstudent`
+--
+ALTER TABLE `selectedstudent`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `student`
 --
 ALTER TABLE `student`
@@ -155,7 +196,7 @@ ALTER TABLE `tpoadmin`
 -- AUTO_INCREMENT for table `applyjob`
 --
 ALTER TABLE `applyjob`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `company`
@@ -170,10 +211,16 @@ ALTER TABLE `recruitment`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `selectedstudent`
+--
+ALTER TABLE `selectedstudent`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tpoadmin`

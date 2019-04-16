@@ -10,7 +10,7 @@ if (isset($_REQUEST['sbmt'])) {
         ?>
         <script>
             alert("Please enter the details");
-            window.location.href = "index.php";
+            window.location.href = "login.php";
         </script>
         <?php
     } else {
@@ -36,7 +36,7 @@ if (isset($_REQUEST['sbmt'])) {
             ?>
             <script>
                 alert("Invalid Email and Password ");
-                window.location.href = "index.php";
+                window.location.href = "login.php";
             </script>
             <?php
         }
@@ -44,7 +44,7 @@ if (isset($_REQUEST['sbmt'])) {
 } else {
     ?>
     <script>
-        window.location.href = "index.php";
+        window.location.href = "login.php";
     </script>
     <?php
 }

@@ -36,6 +36,12 @@
                             <li><i class="menu-icon fa fa-search"></i><a href="viewjobapply.php">View Attendance</a></li>
                         </ul>
                     </li>
+                       <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Recruited</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-search"></i><a href="viewselected.php">View Selected Student</a></li>
+                        </ul>
+                    </li>
 
                     <li class="menu-title"></li>
                     <!-- /.menu-title -->

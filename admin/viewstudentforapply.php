@@ -149,13 +149,15 @@
 
                             <tr>
                                 <th scope="row"><?php echo $row[0]; ?></th>
-                        
-                                <td><?php echo $row1[2]; ?></td>
+
+                                <td><?php echo $row1[1]; ?></td>
                                 <td><?php echo $row1[4]; ?></td>
                                 <td><?php echo $row1[5]; ?></td>
                                 <td><?php echo $row1[6]; ?></td>
-                                
+
                                 <td><a href="deletejobapply.php?id=<?php echo $row1[0]; ?>&jobid=<?php echo $row[0] ?>" class="btn btn-primary">Delete</a></td>
+
+                                <td><a href="studentselect.php?id=<?php echo $row1[0]; ?>&jobid=<?php echo $id; ?>" class="btn btn-primary">Selected ?</a></td>
                             </tr>
 
 
@@ -501,4 +503,3 @@
 </body>
 
 </html>
-    

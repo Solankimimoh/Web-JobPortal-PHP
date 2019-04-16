@@ -27,7 +27,7 @@ if(isset($_REQUEST['sbmt']))
         
         if($rowCount > 0)
         {
-            header("Location: index.php");
+            header("Location: login.php");
         }else
         {
             echo "Error Occured";
